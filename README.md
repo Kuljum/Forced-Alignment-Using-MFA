@@ -58,6 +58,8 @@ Open the .TextGrid files with their corresponding .wav files in Praat:
 	1.Open Praat → Open → Read from file
 	2.Select both .wav and .TextGrid
 	3.Click View & Edit to inspect alignment visually.
+NOTE:
+Use run_alignment_win.bat if you’re on Windows, or run_alignment_mac.sh if you’re on macOS/Linux.
 
  Author:
 	•Name: kamalsahebgari kuljum
