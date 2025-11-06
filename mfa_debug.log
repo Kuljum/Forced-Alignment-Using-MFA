@@ -1,0 +1,36 @@
+ ERROR    There was an error in the run, please see the log.                                   
+Exception ignored in atexit callback: <bound method ExitHooks.history_save_handler of <montreal_forced_aligner.command_line.mfa.ExitHooks object at 0x12c4d54e0>>
+Traceback (most recent call last):
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/montreal_forced_aligner/command_line/mfa.py", line 98, in history_save_handler
+    raise self.exception
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/montreal_forced_aligner/__main__.py", line 6, in <module>
+    mfa_cli()
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/rich_click/rich_command.py", line 402, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/click/core.py", line 1462, in __call__
+    return self.main(*args, **kwargs)
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/rich_click/rich_command.py", line 216, in main
+    rv = self.invoke(ctx)
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/click/core.py", line 1850, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/click/core.py", line 1246, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/click/core.py", line 814, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/click/decorators.py", line 34, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/montreal_forced_aligner/command_line/align.py", line 113, in align_corpus_cli
+    aligner.align()
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/montreal_forced_aligner/alignment/pretrained.py", line 406, in align
+    self.initialize_database()
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/montreal_forced_aligner/abc.py", line 285, in initialize_database
+    MfaSqlBase.metadata.create_all(self.db_engine)
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/montreal_forced_aligner/abc.py", line 291, in db_engine
+    self._db_engine = self.construct_engine()
+  File "/Users/bhanugiri/anaconda3/envs/aligner/lib/python3.10/site-packages/montreal_forced_aligner/abc.py", line 384, in construct_engine
+    kwargs["poolclass"] = sqlalchemy.NullPool
+AttributeError: module 'sqlalchemy' has no attribute 'NullPool'
